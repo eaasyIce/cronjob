@@ -10,13 +10,13 @@
 
 export default {
     async scheduled(event, env, ctx) {
-        ctx.waitUntil(callFlycatServer());
+        // console.log('hello world');
+        ctx.waitUntil(callServer());
     },
 };
 
-const callFlycatServer = async () => {
-    const response = await fetch('https://flycat-backend.onrender.com/health', {
-        method: 'GET',
-    });
-    console.log(await response.json());
+const callServer = async () => {
+    await fetch('https://flycat-backend.onrender.com/health')
+        .then((response) => response.json())
+        .then((data) => console.log(data));
 };
