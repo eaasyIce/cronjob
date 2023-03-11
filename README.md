@@ -1,0 +1,1 @@
+#Flycat server health check

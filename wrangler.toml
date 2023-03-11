@@ -1,0 +1,6 @@
+name = "cronjob"
+main = "src/index.js"
+compatibility_date = "2023-03-11"
+
+[triggers]
+crons = ["*/5 * * * *"]
